@@ -1,46 +1,28 @@
-# cross-chain-resolver-example
+## Main changes
+Just added deploy script
 
-## Installation
+## Env vars
+```env
+SRC_CHAIN_RPC=https://eth.merkle.io
+DST_CHAIN_RPC=wss://bsc-rpc.publicnode.com
+SRC_CHAIN_CREATE_FORK=true
+DST_CHAIN_CREATE_FORK=true
 
-Install example deps
-
-```shell
-pnpm install
+PRIVATE_KEY=***
+FACTORY_ADDRESS=0x0000000000000000000000000000000000000000
+LOP_ADDRESS=0x0000000000000000000000000000000000000000
 ```
 
-Install [foundry](https://book.getfoundry.sh/getting-started/installation)
+## Contract Addresses
 
-```shell
-curl -L https://foundry.paradigm.xyz | bash
-```
+### Ethereum Sepolia (Chain ID: 11155111)
+- **Resolver**: `0xe002e8e986fd4bbff58b49423c7f7e0e0e92cc59`
 
-Install contract deps
+### Base Sepolia (Chain ID: 84532)
+- **Resolver**: `0x3fe279B56F330304446522F04907fBBe03Fe236a`
 
-```shell
-forge install
-```
+### Etherlink Testnet (Chain ID: 128123)
+- **Resolver**: `0xa7c76ECE64a9c7ea863bb324a9451f903e1D0996`
 
-## Running
-
-To run tests you need to provide fork urls for Ethereum and Bsc
-
-```shell
-SRC_CHAIN_RPC=ETH_FORK_URL DST_CHAIN_RPC=BNB_FORK_URL pnpm test
-```
-
-### Public rpc
-
-| Chain    | Url                          |
-|----------|------------------------------|
-| Ethereum | https://eth.merkle.io        |
-| BSC      | wss://bsc-rpc.publicnode.com |
-
-## Test accounts
-
-### Available Accounts
-
-```
-(0) 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" Owner of EscrowFactory
-(1) 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d: "0x70997970C51812dc3A010C7d01b50e0d17dc79C8" User
-(2) 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a: "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC" Resolver
-```
+### Monad Testnet (Chain ID: 10143)
+- **Resolver**: `0x0642d9dE03A087588b39dBc844edE137e81f504E`
